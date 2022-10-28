@@ -1,6 +1,41 @@
 body{
     background-color: black;
-    color: #ffffff;
+    color: lightgrey;
     font-family:Arial, Helvetica, sans-serif;
     text-align: center;
 }
+
+header{
+    background-color:#4D4D4D;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px 0 white;
+}
+
+header * {
+    display: inline;
+}
+
+header li{
+    margin: 20px;
+}
+
+header li a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    font-size: 17px;
+    color: #fff;
+}
+
+a:active {
+    font-size: 16px;
+}
+
