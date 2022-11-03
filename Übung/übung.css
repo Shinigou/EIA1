@@ -1,0 +1,31 @@
+a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+}
+
+ul{
+  list-style-type: none;
+}
+
+header{
+  position: fixed;
+  background-color: rgb(31, 121, 156);
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+header *{
+  display: inline;
+}
+
+
+
+body{
+  text-align: center;
+}
