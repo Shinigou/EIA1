@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,19 +10,49 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="aboutme.html">About me</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>  
-        </nav>
+    <header id="header-background">
+        <div class="seitenbegrenzung"></div>
+        <div class="header-grid-container">
+            <div class="col1">
+                <a href="portfolio.html"><img class="logo" src="material/logo.svg" alt="Logo"></a>
+            </div>
+            <div class="col2">
+                <ul>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li id="aktuell"><a href="aboutme.html">About me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
     </header>
     <main>
-        <br><br><br><br>
-        <h2>About me</h2>
-        <p>Hi! I'm Gerrit.<br>
-    </main>    
+        <div class="seitenbegrenzung">
+            <div>
+                <br><br><br><br>
+                <h2>About me</h2><br>
+                <p class="intro">Hi! I'm Gerrit.<br>
+            </div>
+        </div>
+    </main><br><br>
+    <footer>
+        <div class="seitenbegrenzung">
+            <div class="footer-grid-container">
+                <div class="item1">
+                    <p>EIA 1<br><br>Musterstraße 1<br>78120 Furtwangen<br>Tel.: 01234
+                        567890<br>gerrit.sean.sudarbo@hs-furtwangen.de</p>
+                </div>
+                <div class="item2">
+                    <p>Follow Me</p>
+                    <img class="instalogo" src="./material/icon_insta.svg" alt="insagram">
+                </div>
+                <div class="item3">
+                    <p>Copyright 2022 EIA 1<br>All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
 </body>
+
 </html>
