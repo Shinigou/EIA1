@@ -1,7 +1,25 @@
 #header-background {
-  background-image: url('../material/moon.jpg');
+  background-image: url('../material/moon2.jpg');
   height: 400px;
   margin-top: 0px;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  animation: slideBG 8s linear infinite 0s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes slideBG {
+  0% {
+    background-image: url('../material/moon2.jpg');
+  }
+
+  50% {
+    background-image: url('../material/dark.jpg');
+  }
+
+  100% {
+    background-image: url('../material/umbrella.jpg');
+  }
 }
 
 .header-grid-container {
