@@ -1,0 +1,58 @@
+#header-background {
+  background-image: url('../material/moon.jpg');
+  height: 400px;
+  margin-top: 0px;
+}
+
+.header-grid-container {
+  display: grid;
+  grid-template-columns: 400px 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.col1, .col2 {
+  margin-top: 30px;
+}
+
+
+.logo {
+  height: 30px;
+}
+
+header ul {
+  float: right; /* Listenelemente am rechten Rand anordnen*/
+}
+
+header li {
+  margin: 20px;
+  display: inline; /*Listenelemente nebeneinander*/
+}
+
+header li a {
+  color: grey;
+  text-decoration: none;
+}
+
+
+a:hover {
+  color: #fff;
+  
+}
+
+a:active {
+  font-size: 15px;
+}
+
+a:focus {
+  background-color: #fff;
+
+}
+
+.col2 #aktuell a {
+  color:#fff;
+  text-decoration: underline;
+  text-underline-offset: 0.5em; /* Abstand zwischen Schrift und Unterstrich */
+  text-decoration-thickness: 0.1px; /* Dicke des Unterstrichs */
+  font-size: 18px;
+}
