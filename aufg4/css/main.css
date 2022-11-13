@@ -50,3 +50,13 @@ main img, main video {
 main {
     min-height:calc(100vh - 600px);
 }
+
+main img:hover, main video:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+
+img, video {
+    opacity: 0.8;
+}

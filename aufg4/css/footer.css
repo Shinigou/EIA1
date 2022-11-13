@@ -24,4 +24,9 @@ p {
 
 .instalogo {
   height: 30px;
+  opacity: 0.5;
+}
+
+.instalogo:hover {
+  opacity: 1;
 }
