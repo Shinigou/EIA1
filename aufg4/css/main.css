@@ -8,7 +8,9 @@ body {
     font-family: 'Cinzel', serif;
     font-family: 'Raleway', sans-serif;
     color: #fff;
+    margin: 0px;
 }
+
 
 .main-grid-container {
     display: grid;
@@ -52,6 +54,8 @@ button {
 main img, main video {
     margin: 0 auto;
     width: 800px;
+    position: relative;
+    z-index: auto;
 }
 
 main {
