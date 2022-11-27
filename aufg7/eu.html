@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Carbon Dioxide Emissions</title>
 		<link rel="stylesheet" href="style.css" />
-		<script src="eu.js"></script>
+		<script src="eu.js" defer></script> 
 	</head>
 
 	<body>
@@ -58,7 +58,7 @@
 					<img src="images/finland.png" height="76px" class="finland" />
 					<h5>Finnland</h5>
 				</div>
-				<div class="wrapper active">
+				<div class="wrapper">
 					<img src="images/france.png" height="76px" class="france" />
 					<h5>Frankreich</h5>
 				</div>
@@ -130,29 +130,35 @@
 				</div>
 			</div>
 		</nav>
-
-		<img src="images/eu_stars.png" class="stars" />
-		<h1>Einwohnerzahl in der europäischen Union</h1>
-
 		<main>
+			<div class="chartStarWrapper">
+				<img src="images/eu_stars.png" class="stars" />
+
+				<div class="chartWrapper">
+					<div class="chart"></div>
+				</div>
+			</div>
+
+			<h1>Einwohnerzahl in der europäischen Union</h1>
+
 			<section>
-				<h2>65,48Mio</h2>
-				<p>Gesamtzahl Einwohnerinnen und Einwohner in Frankreich in 2022</p>
+				<h2 class="h2I">65,48Mio</h2>
+				<p class="p1">Gesamtzahl Einwohner:innen in Frankreich in 2022</p>
 			</section>
 
 			<section>
-				<h2>14%</h2>
-				<p>Relativ zur Gesamtzahl in der EU</p>
+				<h2 class="h2II">14%</h2>
+				<p class="p2">Relativ zur Gesamtzahl in der EU</p>
 			</section>
 
 			<section>
-				<h2>5,1%</h2>
-				<p>Wachstumsrate seit 2008</p>
+				<h2 class="h2III">5,1%</h2>
+				<p class="p3">Wachstumsrate seit 2008</p>
 			</section>
 
 			<section>
-				<h2>3,34Mio</h2>
-				<p>Wachstumsrate gesamt zwischen 2008 and 2022</p>
+				<h2 class="h2IV">3,34Mio</h2>
+				<p class="p4">Wachstumsrate gesamt zwischen 2008 and 2022</p>
 			</section>
 		</main>
 
