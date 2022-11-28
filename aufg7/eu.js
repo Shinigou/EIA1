@@ -21,8 +21,8 @@ function AlterContentEU() {
     document.querySelector(".h2I").innerHTML = `${all2022.toLocaleString()} Mio`;
     document.querySelector(".p1").innerHTML = "";
     document.querySelector(".h2II").innerHTML = `${(all2022 / all2022) * 100} %`;
-    document.querySelector(".h2III").innerHTML = `${((all2022 - all2008) / all2008) * 100} %`;
-    document.querySelector(".h2IV").innerHTML = `${all2022 - all2008} Mio`;
+    document.querySelector(".h2III").innerHTML = `${(((all2022 - all2008) / all2008) * 100).toLocaleString()} %`;
+    document.querySelector(".h2IV").innerHTML = `${(all2022 - all2008).toLocaleString()} Mio`;
     document.querySelector(".chart").setAttribute("style", "height:" + (all2022 / all2022) * 100 + "%");
     // Manipulation vom Style-Attribute "height" der chart bar -> passt sich dynamisch an  
 }
@@ -35,9 +35,9 @@ function AlterContentGermany() {
     document.querySelector("h1").innerHTML = "Einwohnerzahl in Deutschland";
     document.querySelector(".h2I").innerHTML = `${germany2022.toLocaleString()} Mio`;
     document.querySelector(".p1").innerHTML = "";
-    document.querySelector(".h2II").innerHTML = `${(germany2022 / all2022) * 100} %`;
-    document.querySelector(".h2III").innerHTML = `${((germany2022 - germany2008) / germany2008) * 100} %`;
-    document.querySelector(".h2IV").innerHTML = `${germany2022 - germany2008}`;
+    document.querySelector(".h2II").innerHTML = `${((germany2022 / all2022) * 100).toLocaleString()} %`;
+    document.querySelector(".h2III").innerHTML = `${(((germany2022 - germany2008) / germany2008) * 100).toLocaleString()} %`;
+    document.querySelector(".h2IV").innerHTML = `${(germany2022 - germany2008).toLocaleString()}`;
     document.querySelector(".chart").setAttribute("style", "height:" + (germany2022 / all2022) * 100 + "%");
 }
 //!SECTION
@@ -49,9 +49,9 @@ function AlterContentItaly() {
     document.querySelector("h1").innerHTML = "Einwohnerzahl in Italien";
     document.querySelector(".h2I").innerHTML = `${italy2022.toLocaleString()} Mio`;
     document.querySelector(".p1").innerHTML = "";
-    document.querySelector(".h2II").innerHTML = `${(italy2022 / all2022) * 100} %`;
-    document.querySelector(".h2III").innerHTML = `${((italy2022 - italy2008) / italy2008) * 100} %`;
-    document.querySelector(".h2IV").innerHTML = `${italy2022 - italy2008} Mio`;
+    document.querySelector(".h2II").innerHTML = `${((italy2022 / all2022) * 100).toLocaleString()} %`;
+    document.querySelector(".h2III").innerHTML = `${(((italy2022 - italy2008) / italy2008) * 100).toLocaleString()} %`;
+    document.querySelector(".h2IV").innerHTML = `${(italy2022 - italy2008).toLocaleString()} Mio`;
     document.querySelector(".chart").setAttribute("style", "height:" + (italy2022 / all2022) * 100 + "%");
 }
 //!SECTION
@@ -63,9 +63,9 @@ function AlterContentDenmark() {
     document.querySelector("h1").innerHTML = "Einwohnerzahl in Dänemark";
     document.querySelector(".h2I").innerHTML = `${denmark2022.toLocaleString()} Mio`;
     document.querySelector(".p1").innerHTML = "";
-    document.querySelector(".h2II").innerHTML = `${(denmark2022 / all2022) * 100} %`;
-    document.querySelector(".h2III").innerHTML = `${((denmark2022 - denmark2008) / denmark2008) * 100} %`;
-    document.querySelector(".h2IV").innerHTML = `${denmark2022 - denmark2008}`;
+    document.querySelector(".h2II").innerHTML = `${((denmark2022 / all2022) * 100).toLocaleString()} %`;
+    document.querySelector(".h2III").innerHTML = `${(((denmark2022 - denmark2008) / denmark2008) * 100).toLocaleString()} %`;
+    document.querySelector(".h2IV").innerHTML = `${(denmark2022 - denmark2008).toLocaleString()}`;
     document.querySelector(".chart").setAttribute("style", "height:" + (denmark2022 / all2022) * 100 + "%");
 }
 //!SECTION
@@ -76,9 +76,9 @@ function AlterContentFrance() {
     document.querySelector("h1").innerHTML = "Einwohnerzahl in Frankreich";
     document.querySelector(".h2I").innerHTML = `${france2022.toLocaleString()} Mio`;
     document.querySelector(".p1").innerHTML = "";
-    document.querySelector(".h2II").innerHTML = `${(france2022 / all2022) * 100} %`;
-    document.querySelector(".h2III").innerHTML = `${((france2022 - france2008) / france2008) * 100} %`;
-    document.querySelector(".h2IV").innerHTML = `${france2022 - france2008}`;
+    document.querySelector(".h2II").innerHTML = `${((france2022 / all2022) * 100).toLocaleString()} %`;
+    document.querySelector(".h2III").innerHTML = `${(((france2022 - france2008) / france2008) * 100).toLocaleString()} %`;
+    document.querySelector(".h2IV").innerHTML = `${(france2022 - france2008).toLocaleString()}`;
     document.querySelector(".chart").setAttribute("style", "height:" + (france2022 / all2022) * 100 + "%");
 }
 //!SECTION

@@ -35,14 +35,15 @@ function AlterContentEU() {
 	document.querySelector(".h2II").innerHTML = `${(all2022 / all2022) * 100} %`;
 
 	document.querySelector(".h2III").innerHTML = `${
-		((all2022 - all2008) / all2008) * 100
+		(((all2022 - all2008) / all2008) * 100).toLocaleString()
 	} %`;
 
-	document.querySelector(".h2IV").innerHTML = `${all2022 - all2008} Mio`;
+	document.querySelector(".h2IV").innerHTML = `${(all2022 - all2008).toLocaleString()} Mio`;
 
 	document.querySelector(".chart").setAttribute("style", "height:" + (all2022 / all2022 ) * 100 + "%") 
 	// Manipulation vom Style-Attribute "height" der chart bar -> passt sich dynamisch an  
 }
+
 //!SECTION
 
 
@@ -60,14 +61,14 @@ function AlterContentGermany() {
 	document.querySelector(".p1").innerHTML = "";
 
 	document.querySelector(".h2II").innerHTML = `${
-		(germany2022 / all2022) * 100
+		((germany2022 / all2022) * 100).toLocaleString()
 	} %`;
 
 	document.querySelector(".h2III").innerHTML = `${
-		((germany2022 - germany2008) / germany2008) * 100
+		(((germany2022 - germany2008) / germany2008) * 100).toLocaleString()
 	} %`;
 
-	document.querySelector(".h2IV").innerHTML = `${germany2022 - germany2008}`;
+	document.querySelector(".h2IV").innerHTML = `${(germany2022 - germany2008).toLocaleString()}`;
 
 	document.querySelector(".chart").setAttribute("style", "height:" + (germany2022 / all2022 ) * 100 + "%") 
 
@@ -89,14 +90,14 @@ function AlterContentItaly() {
 	document.querySelector(".p1").innerHTML = "";
 
 	document.querySelector(".h2II").innerHTML = `${
-		(italy2022 / all2022) * 100
+		((italy2022 / all2022) * 100).toLocaleString()
 	} %`;
 
 	document.querySelector(".h2III").innerHTML = `${
-		((italy2022 - italy2008) / italy2008) * 100
+		(((italy2022 - italy2008) / italy2008) * 100).toLocaleString()
 	} %`;
 
-	document.querySelector(".h2IV").innerHTML = `${italy2022 - italy2008} Mio`;
+	document.querySelector(".h2IV").innerHTML = `${(italy2022 - italy2008).toLocaleString()} Mio`;
 
 	document.querySelector(".chart").setAttribute("style", "height:" + (italy2022 / all2022 ) * 100 + "%") 
 
@@ -118,14 +119,14 @@ function AlterContentDenmark() {
 	document.querySelector(".p1").innerHTML = "";
 
 	document.querySelector(".h2II").innerHTML = `${
-		(denmark2022 / all2022) * 100
+		((denmark2022 / all2022) * 100).toLocaleString()
 	} %`;
 
 	document.querySelector(".h2III").innerHTML = `${
-		((denmark2022 - denmark2008) / denmark2008) * 100
+		(((denmark2022 - denmark2008) / denmark2008) * 100).toLocaleString()
 	} %`;
 
-	document.querySelector(".h2IV").innerHTML = `${denmark2022 - denmark2008}`;
+	document.querySelector(".h2IV").innerHTML = `${(denmark2022 - denmark2008).toLocaleString()}`;
 
 	document.querySelector(".chart").setAttribute("style", "height:" + (denmark2022 / all2022 ) * 100 + "%") 
 }
@@ -145,17 +146,18 @@ document
 		document.querySelector(".p1").innerHTML = "";
 	
 		document.querySelector(".h2II").innerHTML = `${
-			(france2022 / all2022) * 100
+			((france2022 / all2022) * 100).toLocaleString()
 		} %`;
 	
 		document.querySelector(".h2III").innerHTML = `${
-			((france2022 - france2008) / france2008) * 100
+			(((france2022 - france2008) / france2008) * 100).toLocaleString()
 		} %`;
 	
-		document.querySelector(".h2IV").innerHTML = `${france2022 - france2008}`;
+		document.querySelector(".h2IV").innerHTML = `${(france2022 - france2008).toLocaleString()}`;
 
 		document.querySelector(".chart").setAttribute("style", "height:" + (france2022 / all2022 ) * 100 + "%") 
 	}
 	//!SECTION
+
 
 	

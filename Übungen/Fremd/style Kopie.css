@@ -12,11 +12,10 @@ body {
     transition: all .3s;
 }
 
-.wrapper:hover {
+.wrapper:hover, .wrapper.active {
     transform: scale(1.1);
     opacity: 1;
 }
-
 
 .row {
     display: flex;
@@ -63,4 +62,6 @@ footer p {
     height: 75%;
     background: #ffcc00;
 }
+
+
 
