@@ -3,7 +3,8 @@ Aufgabe: Aufg 07 EU DOM Manipulation
 Datum: 27.11.2022 
 */
 
-//SECTION - Declaration of populations of the countries 
+// Declaration of populations of the countries 
+
 const germany2008: number = 82_000_000;
 const germany2022: number = 84_000_000;
 
@@ -19,145 +20,50 @@ const denmark2022: number = 5_850_000;
 let all2008: number = germany2008 + france2008 + italy2008 + denmark2008;
 let all2022: number = germany2022 + france2022 + italy2022 + denmark2022;
 
-//!SECTION
 
 
-//SECTION - Function EU
-document.querySelector(".stars").addEventListener("click", AlterContentEU);
+// Angaben der Veränderungen im Detail pro Land
 
-function AlterContentEU() {
-
-	document.querySelector("h1").innerHTML = "Einwohnerzahl in der europäischen Union";
-
-	document.querySelector(".h2I").innerHTML = `${all2022.toLocaleString()} Mio`;
-	document.querySelector(".p1").innerHTML = "";
-
-	document.querySelector(".h2II").innerHTML = `${(all2022 / all2022) * 100} %`;
-
-	document.querySelector(".h2III").innerHTML = `${
+document.querySelector(".stars").addEventListener("click", function () {
+	alterContent("der europäischen Union", `${all2022.toLocaleString()} Mio`, `${(all2022 / all2022) * 100} %`, `${
 		(((all2022 - all2008) / all2008) * 100).toLocaleString()
-	} %`;
+	} %`, `${(all2022 - all2008).toLocaleString()} Mio`, (all2022 / all2022 ) * 100)
+});
 
-	document.querySelector(".h2IV").innerHTML = `${(all2022 - all2008).toLocaleString()} Mio`;
-
-	document.querySelector(".chart").setAttribute("style", "height:" + (all2022 / all2022 ) * 100 + "%") 
-	// Manipulation vom Style-Attribute "height" der chart bar -> passt sich dynamisch an  
-}
-
-//!SECTION
-
-
-//SECTION - Function Germany
-document
-	.querySelector(".germany")
-	.addEventListener("click", AlterContentGermany);
-
-function AlterContentGermany() {
-	document.querySelector("h1").innerHTML = "Einwohnerzahl in Deutschland";
-
-	document.querySelector(
-		".h2I"
-	).innerHTML = `${germany2022.toLocaleString()} Mio`;
-	document.querySelector(".p1").innerHTML = "";
-
-	document.querySelector(".h2II").innerHTML = `${
-		((germany2022 / all2022) * 100).toLocaleString()
-	} %`;
-
-	document.querySelector(".h2III").innerHTML = `${
+document.querySelector(".germany").addEventListener("click", function () {
+	alterContent("Deutschland", `${germany2022.toLocaleString()} Mio`, `${(germany2022 / germany2022) * 100} %`, `${
 		(((germany2022 - germany2008) / germany2008) * 100).toLocaleString()
-	} %`;
+	} %`, `${(germany2022 - germany2008).toLocaleString()} Mio`, (germany2022 / all2022 ) * 100)
+});
 
-	document.querySelector(".h2IV").innerHTML = `${(germany2022 - germany2008).toLocaleString()}`;
+document.querySelector(".france").addEventListener("click", function () {
+	alterContent("Frankreich", `${france2022.toLocaleString()} Mio`, `${(france2022 / france2022) * 100} %`, `${
+		(((france2022 - france2008) / france2008) * 100).toLocaleString()
+	} %`, `${(france2022 - france2008).toLocaleString()} Mio`, (france2022 / all2022 ) * 100)
+});
 
-	document.querySelector(".chart").setAttribute("style", "height:" + (germany2022 / all2022 ) * 100 + "%") 
-
-}
-//!SECTION
-
-
-//SECTION - Function Italy
-document
-	.querySelector(".italy")
-	.addEventListener("click", AlterContentItaly);
-
-function AlterContentItaly() {
-	document.querySelector("h1").innerHTML = "Einwohnerzahl in Italien";
-
-	document.querySelector(
-		".h2I"
-	).innerHTML = `${italy2022.toLocaleString()} Mio`;
-	document.querySelector(".p1").innerHTML = "";
-
-	document.querySelector(".h2II").innerHTML = `${
-		((italy2022 / all2022) * 100).toLocaleString()
-	} %`;
-
-	document.querySelector(".h2III").innerHTML = `${
+document.querySelector(".italy").addEventListener("click", function () {
+	alterContent("Italien", `${italy2022.toLocaleString()} Mio`, `${(italy2022 / italy2022) * 100} %`, `${
 		(((italy2022 - italy2008) / italy2008) * 100).toLocaleString()
-	} %`;
+	} %`, `${(italy2022 - italy2008).toLocaleString()} Mio`, (italy2022 / all2022 ) * 100)
+});
 
-	document.querySelector(".h2IV").innerHTML = `${(italy2022 - italy2008).toLocaleString()} Mio`;
-
-	document.querySelector(".chart").setAttribute("style", "height:" + (italy2022 / all2022 ) * 100 + "%") 
-
-}
-//!SECTION
-
-
-//SECTION - Function Denmark
-document
-	.querySelector(".denmark")
-	.addEventListener("click", AlterContentDenmark);
-
-function AlterContentDenmark() {
-	document.querySelector("h1").innerHTML = "Einwohnerzahl in Dänemark";
-
-	document.querySelector(
-		".h2I"
-	).innerHTML = `${denmark2022.toLocaleString()} Mio`;
-	document.querySelector(".p1").innerHTML = "";
-
-	document.querySelector(".h2II").innerHTML = `${
-		((denmark2022 / all2022) * 100).toLocaleString()
-	} %`;
-
-	document.querySelector(".h2III").innerHTML = `${
+document.querySelector(".denmark").addEventListener("click", function () {
+	alterContent("Dänemark", `${denmark2022.toLocaleString()} Mio`, `${(denmark2022 / denmark2022) * 100} %`, `${
 		(((denmark2022 - denmark2008) / denmark2008) * 100).toLocaleString()
-	} %`;
+	} %`, `${(denmark2022 - denmark2008).toLocaleString()} Mio`, (denmark2022 / all2022 ) * 100)
+});
 
-	document.querySelector(".h2IV").innerHTML = `${(denmark2022 - denmark2008).toLocaleString()}`;
 
-	document.querySelector(".chart").setAttribute("style", "height:" + (denmark2022 / all2022 ) * 100 + "%") 
+
+// Allgemeine Funktion mit Parametern zum Ändern der jeweiligen Daten 
+
+function alterContent(country:string, population22:string, popRelationEU:string, popGrowthRateSince08:string, popGrowthRateTotal:string, chartBar:number) {
+	document.querySelector("h1").innerHTML = "Einwohnerzahl in " + country
+	document.querySelector(".p1").innerHTML = "Gesamtzahl Einwohner:innen in " + country + " in 2022"
+	document.querySelector(".h2I").innerHTML = population22 
+	document.querySelector(".h2II").innerHTML = popRelationEU
+	document.querySelector(".h2III").innerHTML = popGrowthRateSince08
+	document.querySelector(".h2IV").innerHTML = popGrowthRateTotal
+	document.querySelector(".chart").setAttribute("style", "height:" + chartBar + "%") 
 }
-//!SECTION
-
-
-//SECTION - Function France
-document
-  .querySelector(".france").addEventListener("click", AlterContentFrance)
-
-	function AlterContentFrance() {
-		document.querySelector("h1").innerHTML = "Einwohnerzahl in Frankreich";
-
-		document.querySelector(
-			".h2I"
-		).innerHTML = `${france2022.toLocaleString()} Mio`;
-		document.querySelector(".p1").innerHTML = "";
-	
-		document.querySelector(".h2II").innerHTML = `${
-			((france2022 / all2022) * 100).toLocaleString()
-		} %`;
-	
-		document.querySelector(".h2III").innerHTML = `${
-			(((france2022 - france2008) / france2008) * 100).toLocaleString()
-		} %`;
-	
-		document.querySelector(".h2IV").innerHTML = `${(france2022 - france2008).toLocaleString()}`;
-
-		document.querySelector(".chart").setAttribute("style", "height:" + (france2022 / all2022 ) * 100 + "%") 
-	}
-	//!SECTION
-
-
-	
