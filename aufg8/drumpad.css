@@ -1,0 +1,84 @@
+body {
+	background: #000000;
+}
+.drumpad {
+	display: block;
+	position: absolute;
+	top: 47%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	min-width: 482px;
+}
+button {
+	display: block;
+	position: relative;
+	column-count: 3;
+	float: left;
+	width: 150px;
+	height: 150px;
+	margin: 3px;
+	border-radius: 10px;
+	cursor: pointer;
+	border-width: 1px;
+	color: #ffffff;
+	transition: all 123ms;
+	border: solid;
+}
+
+button:hover {
+	transform: scale(0.98);
+	z-index: 1;
+}
+button:active {
+	transform: scale(0.96)
+}
+
+#play {
+	position: relative;
+	left: 174px;
+}
+#play:hover {
+	transition: all 123ms;
+	cursor: pointer;
+	filter: brightness(200%) saturate(0%) contrast(1000%);
+	transform: scale(0.96)
+}
+@keyframes pulse {
+	0% {transform: scale(1.05);}
+	66% {transform: scale(1.1);}
+	75% {transform: scale(0.95);}
+	100% {transform: scale(1.05);}
+}
+.blue {
+	background: linear-gradient(180deg,#3d94f5 0%, #2167d4 100%);
+	color: #3d94f5;
+	text-shadow: 2px -2px 5px #2167d4;
+}
+.pink {
+	background: linear-gradient(180deg,#fd54ab 0%, #f00b82 100%);
+	color: #fd54ab;
+	text-shadow: 2px -2px 5px #f00b82;
+}
+.orange {
+	background: linear-gradient(180deg,#f19d36 0%, #c96a05 100%);
+	color: #f19d36;
+	text-shadow: 2px -2px 5px #c96a05;
+}
+.blue:hover {
+	box-shadow: 0px 0px 5px #2167d4;
+}    
+.blue:active {
+	box-shadow: 0px 0px 15px #2167d4;
+}
+.pink:hover {
+	box-shadow: 0px 0px 5px #f00b82;
+}
+.pink:active {
+	box-shadow: 0px 0px 15px #f00b82;
+}
+.orange:hover {
+	box-shadow: 0px 0px 5px #c96a05;
+}
+.orange:active {
+	box-shadow: 0px 0px 15px #c96a05;
+}
