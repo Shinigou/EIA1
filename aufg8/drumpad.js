@@ -1,4 +1,4 @@
-// Array für Soundfiles
+// Arrays
 let sounds = [
     'hihat.mp3',
     'kick.mp3',
@@ -12,8 +12,8 @@ let sounds = [
 ];
 let beat = [sounds[0], sounds[1], sounds[2]];
 let zähler = 0;
+// Funktionen 
 window.addEventListener('load', addClickListener);
-// Zentrale Function zum Abspielen der Audiofiles
 function playSample(audioFile) {
     const sound = new Audio(audioFile);
     sound.play();
