@@ -108,9 +108,12 @@ namespace aufg9 {
 	function playRandomBeat() {
 		deleteBeat();
 	
-		for (let i: number = 0; i <= randomBeat.length; i++) {
+		for (let i:number = 0; i > randomBeat.length; i++) {
 			beat.push(randomBeat[Math.floor(Math.random() * 7)]);
 		}
+
+		playBeat();
+		
 	}
 
 // 2.
