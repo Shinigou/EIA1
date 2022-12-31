@@ -29,9 +29,6 @@ html, body {
       border-radius: 5%;
       border-style: double;
       transition: all .3s;
-    
-   
-    
   }
   
   .active {
@@ -55,32 +52,30 @@ html, body {
   .box:hover{
     transform: scale(1.04);
   }
+
   .box:active{
     transform: scale(0.9);
   }
 
-
   
-  .icons, .fa-regular fa-circle-stop {
+   i {
     font-size: 80px;
     color:#ffffff;
+    margin: 10px;
   }
 
-  #play, .fa-regular fa-circle-stop, #mix {
+  #play, i, #mix {
     transition:all 500ms; 
   }
 
-  #play:hover, .fa-regular fa-circle-stop:hover, #mix:hover {
+  #play:hover, i:hover, #mix:hover {
     transform: scale(1.10);
   }
 
-  #play:active, .fa-regular fa-circle-stop:active, #mix:active {
+  #play:active, i:active, #mix:active {
     transform: scale(0.8);
   }
 
-  .hidden {
-    display: none !important;
-  }
   
   /* i{
     color:aliceblue
@@ -90,13 +85,8 @@ html, body {
   
   /* B E M E R K U N G
 
-  - Antwort:
-  Die gewählte Farbe 'aliceblue' macht keinen offensichtlichen Unterschied zu purem 'Weiß', da es ein sehr, sehr heller Farbton ist. Sieht dann so aus, als ob es immer noch weiß wäre. Wenn du die Farbe bspw. in rot, blau oder gelb änderst, wirst du den Unterschied sofort sehen können. 
+  - Die gewählte Farbe 'aliceblue', die vorrher ausgewählt war, macht keinen offensichtlichen Unterschied zu purem 'Weiß', da es ein sehr heller Farbton ist. Sieht dann so aus, als ob es immer noch weiß wäre. Wenn du die Farbe bspw. in rot, blau oder gelb änderst, solltest du den Unterschied sofort sehen können. 
   
-  - Die Farbänderung kannst du jederzeit vornehmen. Sie ist jetzt nicht mehr unter 'i {}', sondern 
-  unter '.Icons {}' zu finden. 
-
-  - Ich habe deine transition auf 500 ms gesetzt, damit der 'transform-effect' spürbarer bzw. sichtbarer wird.
 
   */
 
